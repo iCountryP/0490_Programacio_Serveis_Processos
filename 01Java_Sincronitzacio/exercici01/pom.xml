@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    POM = Project Object Model
+    Es el archivo principal de configuración de un proyecto Maven.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Versión del modelo POM que utiliza Maven -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+        IDENTIFICACIÓN DEL PROYECTO
+    -->
+
+    <!-- Grupo al que pertenece el proyecto -->
+    <groupId>com.project</groupId>
+
+    <!-- Nombre/identificador del proyecto -->
+    <artifactId>exercici01</artifactId>
+
+    <!-- Versión actual del proyecto -->
+    <version>1.0-SNAPSHOT</version>
+
+
+    <!--
+        CONFIGURACIÓN GENERAL
+    -->
+    <properties>
+
+        <!-- Versión de Java que utilizaremos para compilar -->
+        <maven.compiler.release>25</maven.compiler.release>
+
+        <!-- Codificación de los archivos del proyecto -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    </properties>
+
+
+    <!--
+        BUILD
+        Configuración relacionada con la compilación y ejecución.
+    -->
+    <build>
+
+        <plugins>
+
+            <!--
+                Plugin para ejecutar nuestra clase Main desde Maven.
+
+                Nos permitirá utilizar:
+                mvn exec:java
+            -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+
+                <configuration>
+
+                    <!-- Clase que contiene public static void main() -->
+                    <mainClass>com.project.Main</mainClass>
+
+                </configuration>
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>
