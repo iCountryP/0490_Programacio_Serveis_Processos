@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="15.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerConnexio">
+   <children>
+      <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="CONNECT">
+         <font>
+            <Font size="29.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+      <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="IP / SERVIDOR">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="txtServidor" alignment="CENTER" maxWidth="300.0" prefWidth="400.0" promptText="Escribe aquí la IP..." />
+      <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="NOMBRE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" alignment="CENTER" maxWidth="300.0" prefWidth="400.0" promptText="Escribe aquí tu nombre de usuario..." />
+      <Button fx:id="btnConectar" alignment="CENTER" mnemonicParsing="false" onAction="#botonConectar" text="CONECTARSE" />
+   </children>
+</VBox>
